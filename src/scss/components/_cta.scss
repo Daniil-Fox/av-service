@@ -1,0 +1,40 @@
+.cta {
+  padding: 5rem 0;
+  margin-bottom: 10rem;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+
+  &__content {
+    grid-column: 5 span;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(35, 35, 35);
+    line-height: 1.2;
+  }
+  &__desc {
+    margin: 0;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    color: rgb(35, 35, 35);
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__map {
+    grid-column: 7 span;
+    border-radius: .5rem;
+    overflow: hidden;
+    .map {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

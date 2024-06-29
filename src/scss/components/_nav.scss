@@ -1,0 +1,38 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 10%;
+      opacity: 0;
+      height: 1px;
+      background-color: currentColor;
+      transition: opacity .3s ease-out, width 0.3s ease-out;
+    }
+
+    @include hover {
+      &::before {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+
+:root {
+  --font-family: "Geologica", sans-serif;
+  --content-width: 128rem;
+  --container-offset: 2rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --light-color: #fff;
+}

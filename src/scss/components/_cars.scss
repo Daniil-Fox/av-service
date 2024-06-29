@@ -1,0 +1,32 @@
+.cars {
+  padding: 5rem 0;
+  &__title {
+    max-width: 100%;
+    margin-bottom: 5rem;
+  }
+  &__items {
+    max-width: 109rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  &__item {
+    width: 18.5rem;
+  }
+
+  &__image {
+    height: 10rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__capture {
+    font-size: 2rem;
+    color: rgb(35, 35, 35);
+    line-height: 1.2;
+    text-align: center;
+  }
+}
