@@ -17,6 +17,7 @@
     opacity: 1;
     z-index: 99;
   }
+
   &__body {
     position: relative;
     background-color: #fff;
@@ -26,18 +27,32 @@
     overflow: hidden;
 
     padding: 7rem 16rem 9rem;
+
+    @include small-tablet {
+      padding: 3rem 2rem;
+    }
   }
 
   &__title {
-      font-size: 2.8rem;
-      margin-bottom: 1.5rem;
-      color: rgb(6, 8, 23);
-      line-height: 1.286;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: rgb(6, 8, 23);
+    line-height: 1.286;
+
+    @include small-tablet {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__desc {
     font-size: 2rem;
     margin-bottom: 2.5rem;
+
+    @include small-tablet {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__close {

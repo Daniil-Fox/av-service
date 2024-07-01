@@ -70,26 +70,71 @@
       <nav class="nav header__nav">
         <ul class="list-reset nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">Наши услуги</a>
+            <a href="#services" class="nav__link">Наши услуги</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Наши работы</a>
+            <a href="#works" class="nav__link">Наши работы</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Оплата</a>
+            <a href="#payment" class="nav__link">Оплата</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Ремонтируемые марки авто</a>
+            <a href="#cars" class="nav__link">Ремонтируемые марки авто</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Цены</a>
+            <a href="#prices" class="nav__link">Цены</a>
           </li>
         </ul>
       </nav>
     </div>
   </div>
-</header>
 
+  <div class="menu">
+  <div class="menu__body">
+    <nav class="footer__nav nav menu__nav">
+      <ul class="list-reset nav__list">
+        <li class="nav__item">
+          <a class="nav__link">Меню</a>
+        </li>
+        <li class="nav__item">
+          <a href="#services" class="nav__link">Наши услуги</a>
+        </li>
+        <li class="nav__item">
+          <a href="#works" class="nav__link">Наши работы</a>
+        </li>
+        <li class="nav__item">
+          <a href="#payment" class="nav__link">Оплата</a>
+        </li>
+        <li class="nav__item">
+          <a href="#cars" class="nav__link">Рекомендуемые марки авто</a>
+        </li>
+        <li class="nav__item">
+          <a href="#prices" class="nav__link">Цены</a>
+        </li>
+      </ul>
+    </nav>
+
+    <address class="footer__address menu__address">
+      <span class="footer__capture">Контактные данные</span>
+      <a href="tel:78124540340" class="footer__info">
+        <img src="./img/tel-icon.png" alt="">
+        <span>8 (812) 454-03-40</span>
+      </a>
+      <a href="mailto:info@avservice.ru" class="footer__info">
+        <img src="./img/mail-icon.png" alt="">
+        <span>info@avservice.ru</span>
+      </a>
+      <span class="footer__info">
+        <img src="./img/map-icon.png" alt="">
+        <span>Спб, ул. Потапова 2 лит Б.</span>
+      </span>
+      <a href="#" class="footer__tg">
+        <img src="./img/tg-icon.png" alt="">
+      </a>
+    </address>
+  </div>
+</div>
+</header>
     <main class="main">
       <section class="hero">
   <div class="container hero__container">
@@ -103,7 +148,7 @@
   </div>
 </section>
 
-      <section class="services">
+      <section class="services" id="services">
   <div class="container">
     <h2 class="title2 services__title">Наши услуги</h2>
     <p class="desc services__desc">Выполняем более 300 видов работ для 50 марок автомобилей</p>
@@ -210,8 +255,7 @@
     </div>
   </div>
 </section>
-
-      <section class="works">
+      <section class="works" id="works">
   <div class="container">
     <h2 class="title2 works__title">Наши работы</h2>
     <p class="desc works__desc">
@@ -319,8 +363,7 @@
     <div class="works__pagination"></div>
   </div>
 </section>
-
-      <section class="clients">
+      <section class="clients" id="payment">
   <div class="container">
     <h2 class="title2 clients__title">
       Работаем с физическими
@@ -396,8 +439,7 @@
     </div>
   </div>
 </section>
-
-      <section class="cars">
+      <section class="cars" id="cars">
   <div class="container">
     <h2 class="title2 cars__title">
       Ремонтируемые марки авто
@@ -488,8 +530,7 @@
     </div>
   </div>
 </section>
-
-      <section class="price">
+      <section class="price" id="prices">
   <div class="container">
     <div class="price__content">
       <h2 class="title2 price__title">Цены на наши услуги</h2>
@@ -501,13 +542,12 @@
     </div>
   </div>
 </section>
-
       <section class="cta">
   <div class="container cta__container">
     <div class="cta__content">
       <h3 class="cta__title">Заказать звонок</h3>
       <p class="cta__desc">Перезвоним через 5 минут</p>
-      <form action="#" class="cta__form form">
+      <form action="post" class="cta__form form cta-form">
         <label class="form__label">
           <input type="text" class="form__input input-name" placeholder="Ваше имя">
         </label>
@@ -521,15 +561,16 @@
           <textarea placeholder="Опишите вашу проблему" class="form__area input-area"></textarea>
         </label>
         <button class="btn-reset btn form__btn">Отправить</button>
-
-        <input type="checkbox" id="checkbox" class="visually-hidden form__ch">
-        <label for="checkbox" class="form__check">
-          <div class="form__box"></div>
-          <span class="form__text">
-            Нажимая «Отправить», вы принимаете пользовательское соглашение
-            и соглашаетесь с правилами использования и обработки персональных данных.
-          </span>
-        </label>
+        <div id="checkbox-wrapper">
+          <input type="checkbox" id="checkbox" class="visually-hidden form__ch input-check">
+          <label for="checkbox" class="form__check">
+            <div class="form__box"></div>
+            <span class="form__text">
+              Нажимая «Отправить», вы принимаете пользовательское соглашение
+              и соглашаетесь с правилами использования и обработки персональных данных.
+            </span>
+          </label>
+        </div>
       </form>
     </div>
     <div class="cta__map">
@@ -545,7 +586,7 @@
     </div>
     <h3 class="cta__title modal__title">Заказать звонок</h3>
     <p class="cta__desc modal__desc">Наш менеджер свяжется с вами для консультации</p>
-    <form action="#" class="cta__form form">
+    <form action="#" class="cta__form form modal-form">
       <label class="form__label">
         <input type="text" class="form__input input-name" placeholder="Ваше имя">
       </label>
@@ -553,15 +594,16 @@
         <input type="tel" class="form__input input-tel" placeholder="+7 (___)-___-__-__">
       </label>
       <button class="btn-reset btn form__btn">Отправить</button>
-
-      <input type="checkbox" id="m-checkbox" class="visually-hidden form__ch">
-      <label for="m-checkbox" class="form__check">
-        <div class="form__box"></div>
-        <span class="form__text">
-          Нажимая «Отправить», вы принимаете пользовательское соглашение
-          и соглашаетесь с правилами использования и обработки персональных данных.
-        </span>
-      </label>
+      <div id="m-checkbox">
+        <input type="checkbox" id="m-check" class="visually-hidden form__ch input-check">
+        <label for="m-check" class="form__check">
+          <div class="form__box"></div>
+          <span class="form__text">
+            Нажимая «Отправить», вы принимаете пользовательское соглашение
+            и соглашаетесь с правилами использования и обработки персональных данных.
+          </span>
+        </label>
+      </div>
     </form>
   </div>
 </div>
@@ -576,22 +618,22 @@
     <nav class="footer__nav nav">
       <ul class="list-reset nav__list">
         <li class="nav__item">
-          <a href="#" class="nav__link">Меню</a>
+          <a class="nav__link">Меню</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Наши услуги</a>
+          <a href="#services" class="nav__link">Наши услуги</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Наши работы</a>
+          <a href="#works" class="nav__link">Наши работы</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Оплата</a>
+          <a href="#payment" class="nav__link">Оплата</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Рекомендуемые марки авто</a>
+          <a href="#cars" class="nav__link">Рекомендуемые марки авто</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Цены</a>
+          <a href="#prices" class="nav__link">Цены</a>
         </li>
       </ul>
     </nav>

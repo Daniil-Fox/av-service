@@ -15,6 +15,9 @@
     line-height: 1.2;
     text-align: center;
 
+    @include small-tablet {
+      font-size: 1.4rem;
+    }
 
     &::before {
       content: "";

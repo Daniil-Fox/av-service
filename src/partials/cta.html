@@ -3,7 +3,7 @@
     <div class="cta__content">
       <h3 class="cta__title">Заказать звонок</h3>
       <p class="cta__desc">Перезвоним через 5 минут</p>
-      <form action="#" class="cta__form form">
+      <form action="post" class="cta__form form cta-form">
         <label class="form__label">
           <input type="text" class="form__input input-name" placeholder="Ваше имя">
         </label>
@@ -17,15 +17,16 @@
           <textarea placeholder="Опишите вашу проблему" class="form__area input-area"></textarea>
         </label>
         <button class="btn-reset btn form__btn">Отправить</button>
-
-        <input type="checkbox" id="checkbox" class="visually-hidden form__ch">
-        <label for="checkbox" class="form__check">
-          <div class="form__box"></div>
-          <span class="form__text">
-            Нажимая «Отправить», вы принимаете пользовательское соглашение
-            и соглашаетесь с правилами использования и обработки персональных данных.
-          </span>
-        </label>
+        <div id="checkbox-wrapper">
+          <input type="checkbox" id="checkbox" class="visually-hidden form__ch input-check">
+          <label for="checkbox" class="form__check">
+            <div class="form__box"></div>
+            <span class="form__text">
+              Нажимая «Отправить», вы принимаете пользовательское соглашение
+              и соглашаетесь с правилами использования и обработки персональных данных.
+            </span>
+          </label>
+        </div>
       </form>
     </div>
     <div class="cta__map">

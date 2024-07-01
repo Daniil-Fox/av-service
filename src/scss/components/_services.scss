@@ -1,28 +1,50 @@
 .services {
   padding: 9rem 0;
 
+  @include small-tablet {
+    padding: 4rem 0;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
+
   &__item {
     display: flex;
     flex-direction: column;
-    &--big{
+
+    &--big {
       grid-column: 2 span;
       grid-row: 2 span;
+
+      @include small-tablet {
+        grid-column: 1 span;
+        grid-row: 1 span;
+      }
 
       .services__image {
         height: 100%;
       }
     }
   }
+
   &__image {
     margin-bottom: 1.5rem;
     height: 30rem;
     border-radius: .5rem;
     overflow: hidden;
+
+    @include small-tablet {
+      height: 16rem;
+      margin-bottom: 0.5rem;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -34,5 +56,9 @@
     color: rgb(35, 35, 35);
     line-height: 1.2;
     text-align: center;
+
+    @include small-tablet {
+      font-size: 1.3rem;
+    }
   }
 }

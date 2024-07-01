@@ -1,16 +1,23 @@
 .form {
   text-align: center;
+
   &__label {
     display: block;
     width: 100%;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 1rem;
     }
   }
+
   &__btn {
     font-size: 1.8rem;
+
+    @include small-tablet {
+      font-size: 1.4rem;
+    }
   }
+
   &__input {
     display: block;
     width: 100%;
@@ -21,9 +28,15 @@
 
     border-radius: .3rem;
     border: 1px solid #bdbdbd;
+
+    @include small-tablet {
+      height: 3.8rem;
+      padding: 1rem;
+    }
+
     &::placeholder {
-        color: rgb(189, 189, 189);
-        line-height: 1.2;
+      color: rgb(189, 189, 189);
+      line-height: 1.2;
     }
   }
 
@@ -41,12 +54,14 @@
 
     border-radius: .3rem;
     border: 1px solid #bdbdbd;
+
     &::placeholder {
-        color: rgb(189, 189, 189);
-        line-height: 1.2;
+      color: rgb(189, 189, 189);
+      line-height: 1.2;
     }
   }
-  &__ch:checked+.form__check > .form__box {
+
+  &__ch:checked+.form__check>.form__box {
     background-color: #dc7d43;
     border-color: transparent;
     background-image: url('./../img/check.png');
@@ -54,6 +69,7 @@
     background-size: 80%;
     background-repeat: no-repeat;
   }
+
   &__check {
     margin-top: 1.2rem;
     text-align: left;
@@ -67,6 +83,7 @@
       line-height: 1.333;
     }
   }
+
   &__box {
     cursor: pointer;
     display: block;

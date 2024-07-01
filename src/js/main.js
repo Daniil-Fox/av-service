@@ -1,49 +1,60 @@
-import './_components.js';
+import "./_components.js";
+import "./_functions.js";
+const modal = document.querySelector(".modal");
+const modalBody = modal.querySelector(".modal__body");
+const modalClose = modal.querySelector(".modal__close");
 
+const modalButtons = document.querySelectorAll(".modal-btn");
 
-const modal = document.querySelector('.modal')
-const modalBody = modal.querySelector('.modal__body')
-const modalClose = modal.querySelector('.modal__close')
+modalButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-const modalButtons = document.querySelectorAll('.modal-btn')
+    modal.classList.add("active");
+  });
+});
 
-modalButtons.forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.preventDefault()
+modalBody.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 
-    modal.classList.add('active')
-  })
-})
+modal.addEventListener("click", (e) => {
+  e.preventDefault();
 
-modalBody.addEventListener('click', e => {
-  e.stopPropagation()
-})
+  modal.classList.remove("active");
+});
 
-modal.addEventListener('click', e => {
-  e.preventDefault()
+modalClose.addEventListener("click", (e) => {
+  modal.classList.remove("active");
+});
 
-  modal.classList.remove('active')
-})
+const header = document.querySelector(".header");
 
-modalClose.addEventListener('click', e => {
-  modal.classList.remove('active')
-})
+const headerHeight = header.clientHeight;
+const siteContainer = document.querySelector(".site-container");
 
-
-
-const header = document.querySelector('.header')
-
-const headerHeight = header.clientHeight
-const siteContainer = document.querySelector('.site-container')
-
-window.addEventListener('scroll', e => {
-  if(window.scrollY >= headerHeight){
-    if(header.classList.contains('fixed')) return
-    siteContainer.style.paddingTop = headerHeight + 'px'
-    header.classList.add('fixed')
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY >= headerHeight) {
+    if (header.classList.contains("fixed")) return;
+    siteContainer.style.paddingTop = headerHeight + "px";
+    header.classList.add("fixed");
   } else {
-    if(!header.classList.contains('fixed')) return
-    siteContainer.style.paddingTop = null
-    header.classList.remove('fixed')
+    if (!header.classList.contains("fixed")) return;
+    siteContainer.style.paddingTop = null;
+    header.classList.remove("fixed");
   }
-})
+});
+
+const menuBtn = document.querySelector(".header__burger");
+
+const menu = document.querySelector(".menu");
+const menuItes = menu.querySelectorAll(".nav__link");
+menuBtn.addEventListener("click", (e) => {
+  menu.classList.toggle("active");
+});
+
+menuItes.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    menu.classList.remove("active");
+  });
+});

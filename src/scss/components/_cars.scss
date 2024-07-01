@@ -1,9 +1,15 @@
 .cars {
   padding: 5rem 0;
+
+  @include small-tablet {
+    padding: 2rem 0;
+  }
+
   &__title {
     max-width: 100%;
     margin-bottom: 5rem;
   }
+
   &__items {
     max-width: 109rem;
     margin: 0 auto;
@@ -12,15 +18,32 @@
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
+
+    @include small-tablet {
+      gap: 1.5rem;
+    }
   }
 
   &__item {
     width: 18.5rem;
+
+    @include small-tablet {
+      width: 15rem;
+    }
   }
 
   &__image {
     height: 10rem;
     margin-bottom: 1.5rem;
+
+    img {
+      // height: 100%;
+      width: 100%;
+    }
+
+    @include small-tablet {
+      height: 8rem;
+    }
   }
 
   &__capture {
@@ -28,5 +51,9 @@
     color: rgb(35, 35, 35);
     line-height: 1.2;
     text-align: center;
+
+    @include small-tablet {
+      font-size: 1.6rem;
+    }
   }
 }

@@ -1,0 +1,30 @@
+.menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+
+  background-color: #fff;
+  padding: 4rem 2rem 10rem;
+  transform: translateY(-120%);
+
+  transition: transform .4s ease-out;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &__nav {
+    margin-bottom: 2rem;
+
+    .nav__list {
+      align-items: flex-start !important;
+    }
+  }
+
+  &__address {
+    align-items: flex-start !important;
+  }
+}

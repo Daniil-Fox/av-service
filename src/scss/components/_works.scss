@@ -1,6 +1,10 @@
 .works {
   padding: 8rem 0;
 
+  @include small-tablet {
+    padding: 3rem 0;
+  }
+
   .swiper-slide {
     box-sizing: border-box;
   }
@@ -9,6 +13,7 @@
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+
     .swiper-pagination-bullet {
       margin: 0 .5rem;
       width: 1rem;
@@ -16,9 +21,11 @@
       background-color: #dc7d43;
     }
   }
+
   &__wrapper {
     position: relative;
   }
+
   &__btn {
     position: absolute;
     z-index: 5;
@@ -33,6 +40,7 @@
     &.swiper-button-disabled {
       opacity: 0.5;
     }
+
     img {
       width: 100%;
       height: 100%;
@@ -43,6 +51,7 @@
       left: -7rem;
       transform: rotate(180deg) translateY(-50%);
     }
+
     &--next {
       right: -7rem;
     }
@@ -55,22 +64,43 @@
   justify-content: space-between;
   gap: 3rem;
 
+  @include small-tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   &__image {
     flex: 1;
     width: 100%;
     height: 100%;
     border-radius: .5rem;
     overflow: hidden;
+
+    @include small-tablet {
+      height: 24rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
+
   &__chars {
     flex: 1;
   }
+
   &__capture {
     display: block;
     margin-bottom: 2rem;
     font-size: 2rem;
     color: rgb(35, 35, 35);
     line-height: 1.2;
+
+    @include small-tablet {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__list {
@@ -85,6 +115,7 @@
       color: rgb(133, 133, 133);
       line-height: 1.2;
     }
+
     p {
       margin: 0;
       font-size: 1.8rem;
@@ -102,9 +133,10 @@
   justify-content: space-between;
   overflow: hidden;
 
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+
   &__capture {
     flex-grow: 1;
     display: block;
@@ -115,9 +147,15 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @include small-tablet {
+      font-size: 1.6rem;
+    }
+
     span {
       flex-shrink: 0;
       white-space: nowrap;
+
       &::after {
         content: "............................................................................................................................................................................................................................................................................................................................................................";
         position: absolute;
@@ -132,5 +170,8 @@
     line-height: 1.2;
     text-align: right;
 
+    @include small-tablet {
+      font-size: 1.6rem;
+    }
   }
 }
